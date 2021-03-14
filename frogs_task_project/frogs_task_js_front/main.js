@@ -17,7 +17,7 @@ function taskConstructor() {
     let data = new Task();
 
     let status = document.querySelector('#status');
-    let task = document.querySelector('#task');
+    let name = document.querySelector('#name');
     let date = document.querySelector('#date');
     let time = document.querySelector('#time');
     let task_type = document.querySelector('#task_type');
@@ -25,14 +25,14 @@ function taskConstructor() {
 
     
     data.status = status.value
-    data.task = task.value;
+    data.name = name.value;
     data.date = date.value;
     data.time = time.value;
     data.task_type = task_type.value;
     data.priority = priority.value;
     
 
-    repository.post_task(data);
+    repository.post_task(JSON.stringify(data));
 
     
 }
