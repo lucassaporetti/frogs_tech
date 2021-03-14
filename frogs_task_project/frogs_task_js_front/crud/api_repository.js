@@ -1,9 +1,11 @@
+const api_url = "http://localhost:8000/tasks/";
+
 export default class Api_repository {
 
   // GET all method
   get_all_tasks() {
 
-    fetch("http://localhost:8000/tasks/")
+    fetch(api_url)
     .then(function(response) {
       response.json().then(function(data) {
         console.log(data);
@@ -16,7 +18,7 @@ export default class Api_repository {
   // POST method
   post_task(data) {
 
-    fetch("http://localhost:8000/tasks/", {
+    fetch(api_url, {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
       body: data
