@@ -1,0 +1,37 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: none;
+
+
+}
+
+main{
+    margin-top: 200px;
+}
+
+
+#myForm {
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myForm button{
+    margin: 20px 0;
+}
+
+.area{
+    margin: 10px 0;
+}
+
+.area label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
