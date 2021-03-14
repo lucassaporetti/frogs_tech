@@ -1,13 +1,9 @@
 import Api_repository from "./crud/api_repository.js";
 import Task from "./model/task_model.js";
-import Entity from "./model/entity.js";
 
+/* const get_tasks = new Api_repository();
 
-
-
-const get_tasks = new Api_repository();
-
-get_tasks.get_all_tasks();
+get_tasks.get_all_tasks(); */
 
 let repository = new Api_repository();
 
@@ -36,7 +32,7 @@ function taskConstructor() {
     data.priority = priority.value;
     
 
-    repository.post(data);
+    repository.post_task(data);
 
     
 }
