@@ -10,9 +10,8 @@ export default class Api_repository {
 
       response.json().then(function(data) {
 
-        console.log(data);
-
-        console.log(data.title);
+        appendData(data);
+        
       });
 
     }).catch(function(err) {
@@ -21,3 +20,24 @@ export default class Api_repository {
     });
   }
 }
+
+
+
+var mainContainer = document.getElementById("myData");
+
+function appendData(data) {
+  var mainContainer = document.getElementById("myData");
+  for (var i = 0; i < data.length; i++) {
+
+    
+    var div = document.createElement("div");
+
+    div.innerHTML = ` { ' uuid: ${data[i].uuid}  status: ${data[i].status} name: ${data[i].name}
+    date: ${data[i].date} time: ${data[i].time} task_type: ${data[i].task_type}
+    priority: ${data[i].priority}} `
+
+    mainContainer.appendChild(div);
+  }
+}
+
+
